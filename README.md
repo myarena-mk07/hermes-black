@@ -56,6 +56,56 @@ anthropic-ratelimit-unified-representative-claim five_hour
 `representative-claim: five_hour` means the request was claimed against your
 subscription's 5-hour window rather than pay-per-token extra usage.
 
+## Troubleshooting
+
+### Anthropic is missing from the Desktop model picker (but works in the CLI)
+
+Expected, and not caused by this plugin. Hermes Desktop always requests the
+model list with `explicit_only=1`, and that filter keeps only providers you
+**explicitly** configured:
+
+```python
+# hermes_cli/auth.py
+def is_provider_explicitly_configured(provider_id):
+    """...used to gate auto-discovery of external credentials
+    (e.g. Claude Code's ~/.claude/.credentials.json) so they are
+    never used without the user's explicit choice."""
+```
+
+If your Anthropic access was auto-discovered from Claude Code, Desktop hides it
+by design. The backend still has it — querying the picker API without that flag
+returns `anthropic | authenticated: True | total_models: 12`.
+
+Make the choice explicit, then restart Desktop:
+
+```sh
+hermes model      # select Anthropic, then a Claude model
+```
+
+That writes `model.provider: anthropic` into `config.yaml`. Setting
+`active_provider: anthropic` in `auth.json`, or a MoA slot with
+`provider: anthropic`, works too.
+
+> **Do not set `ANTHROPIC_API_KEY` to make it appear.** It satisfies the check,
+> but it sits *above* your OAuth token in Hermes' resolution order, so requests
+> would silently switch from your Claude plan to pay-per-token API billing.
+
+Note this makes Anthropic your default provider. There is no supported way to
+keep a different default while showing Anthropic in the picker — the visibility
+gate *is* the explicit-choice gate.
+
+### `~/.claude/.credentials.json` looks expired
+
+Harmless. Claude Code 2.1.114+ stores live credentials in the macOS Keychain
+and may leave the JSON file stale. Hermes reads both and prefers whichever is
+valid. This plugin never reads, writes, or refreshes either.
+
+### The trace file is empty
+
+The envelope only applies to Anthropic **OAuth** requests on `anthropic.com`.
+An API key, a proxy provider (for example a `ce-claude`-style gateway), or any
+other provider is passed through untouched and is never traced.
+
 ## Update / uninstall
 
 ```sh
