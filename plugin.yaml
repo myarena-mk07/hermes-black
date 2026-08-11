@@ -1,0 +1,4 @@
+name: hermes-black
+version: "0.1.0"
+description: Route Hermes' Anthropic OAuth traffic using Claude Code 2.1.224 request conventions
+author: local

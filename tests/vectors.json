@@ -1,0 +1,430 @@
+{
+ "_source": "pi-black v0.84.1-cc2.1.224.4",
+ "xxhash": [
+  {
+   "data": "",
+   "seed": "0",
+   "expect": "ef46db3751d8e999"
+  },
+  {
+   "data": "",
+   "seed": "5577024349156291176",
+   "expect": "b8b30e7de65b46c5"
+  },
+  {
+   "data": "a",
+   "seed": "0",
+   "expect": "d24ec4f1a98c6e5b"
+  },
+  {
+   "data": "a",
+   "seed": "5577024349156291176",
+   "expect": "de28ae28b0e07bb2"
+  },
+  {
+   "data": "abc",
+   "seed": "0",
+   "expect": "44bc2cf5ad770999"
+  },
+  {
+   "data": "abc",
+   "seed": "5577024349156291176",
+   "expect": "dfc4f4d6913699b6"
+  },
+  {
+   "data": "abcd",
+   "seed": "0",
+   "expect": "de0327b0d25d92cc"
+  },
+  {
+   "data": "abcd",
+   "seed": "5577024349156291176",
+   "expect": "2f2cc779a9e10bc3"
+  },
+  {
+   "data": "abcdefg",
+   "seed": "0",
+   "expect": "1860940e2902822d"
+  },
+  {
+   "data": "abcdefg",
+   "seed": "5577024349156291176",
+   "expect": "852452cad853146b"
+  },
+  {
+   "data": "abcdefgh",
+   "seed": "0",
+   "expect": "3ad351775b4634b7"
+  },
+  {
+   "data": "abcdefgh",
+   "seed": "5577024349156291176",
+   "expect": "6e0e8b1a2888cbe2"
+  },
+  {
+   "data": "0123456789abcdef",
+   "seed": "0",
+   "expect": "5c5b90c34e376d0b"
+  },
+  {
+   "data": "0123456789abcdef",
+   "seed": "5577024349156291176",
+   "expect": "1595aaf9197f7c16"
+  },
+  {
+   "data": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "seed": "0",
+   "expect": "60dd0d01083b99f0"
+  },
+  {
+   "data": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "seed": "5577024349156291176",
+   "expect": "a70e5b75dc1bffd3"
+  },
+  {
+   "data": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+   "seed": "0",
+   "expect": "64da1f1d3495ce66"
+  },
+  {
+   "data": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+   "seed": "5577024349156291176",
+   "expect": "21ee3e1513976c71"
+  },
+  {
+   "data": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+   "seed": "0",
+   "expect": "c5241253c64e0268"
+  },
+  {
+   "data": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+   "seed": "5577024349156291176",
+   "expect": "1ef354c43461cbfb"
+  },
+  {
+   "data": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+   "seed": "0",
+   "expect": "5655079e5f8b1c6d"
+  },
+  {
+   "data": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+   "seed": "5577024349156291176",
+   "expect": "ed77ae9b6ba622e7"
+  },
+  {
+   "data": "héllo wörld ünïcode ✓ 日本語",
+   "seed": "0",
+   "expect": "3710e92ad02eda53"
+  },
+  {
+   "data": "héllo wörld ünïcode ✓ 日本語",
+   "seed": "5577024349156291176",
+   "expect": "c4c5cd78df3f3c84"
+  },
+  {
+   "data": "{\"k\":\"v\"}",
+   "seed": "0",
+   "expect": "906293ee907032d7"
+  },
+  {
+   "data": "{\"k\":\"v\"}",
+   "seed": "5577024349156291176",
+   "expect": "97c391cab7045cc3"
+  }
+ ],
+ "fingerprint": [
+  {
+   "messages": [
+    {
+     "role": "user",
+     "content": "hello world this is a longer prompt for indexing"
+    }
+   ],
+   "expect": "755"
+  },
+  {
+   "messages": [
+    {
+     "role": "user",
+     "content": "abc"
+    }
+   ],
+   "expect": "26e"
+  },
+  {
+   "messages": [
+    {
+     "role": "user",
+     "content": ""
+    }
+   ],
+   "expect": "26e"
+  },
+  {
+   "messages": [
+    {
+     "role": "system",
+     "content": "ignored"
+    },
+    {
+     "role": "user",
+     "content": "second message wins?"
+    }
+   ],
+   "expect": "7f8"
+  },
+  {
+   "messages": [
+    {
+     "role": "user",
+     "content": [
+      {
+       "type": "text",
+       "text": "block form prompt here ok"
+      }
+     ]
+    }
+   ],
+   "expect": "a79"
+  },
+  {
+   "messages": [
+    {
+     "role": "user",
+     "content": [
+      {
+       "type": "text",
+       "text": "日本語テキストのプロンプト"
+      }
+     ]
+    }
+   ],
+   "expect": "774"
+  },
+  {
+   "messages": [],
+   "expect": "26e"
+  }
+ ],
+ "cch": [
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "hi"
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ]
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=29b67;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}]}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "unicode ✓ 日本語 emoji 🚀"
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ]
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"unicode ✓ 日本語 emoji 🚀\"}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=dea6f;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}]}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "hi"
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ],
+    "tools": [
+     {
+      "name": "mcp__read_file",
+      "description": "Read",
+      "input_schema": {
+       "type": "object",
+       "properties": {
+        "p": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    ]
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=28703;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}],\"tools\":[{\"name\":\"mcp__read_file\",\"description\":\"Read\",\"input_schema\":{\"type\":\"object\",\"properties\":{\"p\":{\"type\":\"string\"}}}}]}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": [
+       {
+        "type": "image",
+        "source": {
+         "type": "base64",
+         "media_type": "image/png",
+         "data": "iVBORw0KGgo="
+        }
+       },
+       {
+        "type": "text",
+        "text": "describe"
+       }
+      ]
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ]
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":[{\"type\":\"image\",\"source\":{\"type\":\"base64\",\"media_type\":\"image/png\",\"data\":\"iVBORw0KGgo=\"}},{\"type\":\"text\",\"text\":\"describe\"}]}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=0fd53;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}]}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "hi"
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ],
+    "temperature": 1,
+    "thinking": {
+     "type": "adaptive",
+     "display": "summarized"
+    },
+    "output_config": {
+     "effort": "high"
+    }
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=bbac7;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}],\"temperature\":1,\"thinking\":{\"type\":\"adaptive\",\"display\":\"summarized\"},\"output_config\":{\"effort\":\"high\"}}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "hi"
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ],
+    "metadata": {
+     "user_id": "{\"device_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"account_uuid\":\"11111111-2222-4333-8444-555555555555\",\"session_id\":\"s-1\"}"
+    }
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=c56bd;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}],\"metadata\":{\"user_id\":\"{\\\"device_id\\\":\\\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\",\\\"account_uuid\\\":\\\"11111111-2222-4333-8444-555555555555\\\",\\\"session_id\\\":\\\"s-1\\\"}\"}}"
+  },
+  {
+   "body": {
+    "model": "claude-opus-5",
+    "messages": [
+     {
+      "role": "user",
+      "content": "t"
+     },
+     {
+      "role": "assistant",
+      "content": [
+       {
+        "type": "tool_use",
+        "id": "toolu_1",
+        "name": "mcp__read_file",
+        "input": {
+         "path": "/a"
+        }
+       }
+      ]
+     }
+    ],
+    "max_tokens": 64000,
+    "stream": true,
+    "system": [
+     {
+      "type": "text",
+      "text": "x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=00000;"
+     },
+     {
+      "type": "text",
+      "text": "You are a Claude agent, built on Anthropic's Claude Agent SDK."
+     }
+    ]
+   },
+   "expect": "{\"model\":\"claude-opus-5\",\"messages\":[{\"role\":\"user\",\"content\":\"t\"},{\"role\":\"assistant\",\"content\":[{\"type\":\"tool_use\",\"id\":\"toolu_1\",\"name\":\"mcp__read_file\",\"input\":{\"path\":\"/a\"}}]}],\"max_tokens\":64000,\"stream\":true,\"system\":[{\"type\":\"text\",\"text\":\"x-anthropic-billing-header: cc_version=2.1.224.abc; cc_entrypoint=sdk-cli; cch=cfed9;\"},{\"type\":\"text\",\"text\":\"You are a Claude agent, built on Anthropic's Claude Agent SDK.\"}]}"
+  }
+ ]
+}
