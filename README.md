@@ -22,7 +22,7 @@ is verified byte-for-byte against that implementation.
 ## Install
 
 ```sh
-git clone https://github.com/<you>/hermes-black.git ~/.hermes/plugins/hermes-black
+git clone https://github.com/myarena-mk07/hermes-black.git ~/.hermes/plugins/hermes-black
 hermes plugins enable hermes-black
 ```
 
